@@ -3,6 +3,11 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeybo
 
 
 # from database.mysql_db import mysql_read_courses_list, mysql_read_coulinary_list
+def get_main():
+    back = InlineKeyboardMarkup(row_width=1)
+    b1 = InlineKeyboardButton('Вернуться в главное меню', callback_data='back')
+    back.add(b1)
+    return back
 
 def get_kb_start():
     start_inline = InlineKeyboardMarkup(row_width=2)
@@ -10,7 +15,11 @@ def get_kb_start():
     b2 = InlineKeyboardButton('Удельная раздробленность 1132-1237', callback_data='2')
     b3 = InlineKeyboardButton('Начало татаро-монгольского ига 1237-1267 г.', callback_data='3')
     b4 = InlineKeyboardButton('Возвышение Москвы 1267-1389', callback_data='4')
-    start_inline.add(b1).add(b2).add(b3).add(b4)
+    b5 = InlineKeyboardButton('1389-1521 Возвышение Москвы', callback_data='5')
+    b6 = InlineKeyboardButton('1530-1598 Иван Грозный и Фёдор Иоанович', callback_data='6')
+    b7 = InlineKeyboardButton('1598-1613 Смутное время', callback_data='7')
+    b8 = InlineKeyboardButton('Бунташный век 1613-1682', callback_data='8')
+    start_inline.add(b1).add(b2).add(b3).add(b4).add(b5).add(b6).add(b7).add(b8)
     return start_inline
 
 
